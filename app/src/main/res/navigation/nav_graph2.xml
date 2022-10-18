@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/addVehicle">
+
+    <fragment
+        android:id="@+id/addVehicle"
+        android:name="com.kharim.connectride.vehicle.AddVehicle"
+        android:label="fragment_add_vehicle"
+        tools:layout="@layout/fragment_add_vehicle" >
+        <action
+            android:id="@+id/action_addVehicle_to_amendVehicleDetails"
+            app:destination="@id/amendVehicleDetails" />
+        <action
+            android:id="@+id/action_addVehicle_to_uploads"
+            app:destination="@id/uploads" />
+    </fragment>
+    <fragment
+        android:id="@+id/amendVehicleDetails"
+        android:name="com.kharim.connectride.vehicle.AmendVehicleDetails"
+        android:label="fragment_amend_vehicle_details"
+        tools:layout="@layout/fragment_amend_vehicle_details" >
+        <action
+            android:id="@+id/action_amendVehicleDetails_to_addVehicle"
+            app:destination="@id/addVehicle" />
+        <action
+            android:id="@+id/action_amendVehicleDetails_to_uploads"
+            app:destination="@id/uploads" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploads"
+        android:name="com.kharim.connectride.vehicle.Uploads"
+        android:label="fragment_uploads"
+        tools:layout="@layout/fragment_uploads" >
+        <action
+            android:id="@+id/action_uploads_to_addVehicle"
+            app:destination="@id/addVehicle" />
+        <action
+            android:id="@+id/action_uploads_to_amendVehicleDetails"
+            app:destination="@id/amendVehicleDetails" />
+    </fragment>
+</navigation>

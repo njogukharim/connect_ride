@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph3"
+    app:startDestination="@id/vehicleDetails">
+
+    <fragment
+        android:id="@+id/rentalReservation"
+        android:name="com.kharim.connectride.categories.RentalReservation"
+        android:label="fragment_rental_reservation"
+        tools:layout="@layout/fragment_rental_reservation" >
+        <action
+            android:id="@+id/action_rentalReservation_to_vehicleDetails"
+            app:destination="@id/vehicleDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleDetails"
+        android:name="com.kharim.connectride.categories.VehicleDetails"
+        android:label="fragment_vehicle_details"
+        tools:layout="@layout/fragment_vehicle_details" >
+        <action
+            android:id="@+id/action_vehicleDetails_to_rentalReservation"
+            app:destination="@id/rentalReservation" />
+    </fragment>
+</navigation>
