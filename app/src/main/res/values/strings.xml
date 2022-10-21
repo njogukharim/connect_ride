@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Connect Ride</string>
     <string name="next">Next</string>
-    <string name="login">Login</string>
+    <string name="login">LOGIN</string>
     <string name="create_account">Create Account</string>
     <string name="uploads">Uploads</string>
     <string name="upload">Upload</string>
@@ -9,8 +9,95 @@
     <string name="home">Home</string>
     <string name="done">Done</string>
     <string name="order">Order</string>
-    <string name="add_vehicle">Add Vehicle</string>
+    <string name="add_vehicle">Add Your Vehicle</string>
     <string name="amend_details">Amend Vehicle Details</string>
-    <string name="welcome_message">Welcome to Connect Ride</string>
+    <string name="welcome_message">Welcome to \nConnect Ride Car Rental</string>
+    <string name="get_started">Get Started</string>
+    <string name="mini">Mini</string>
+    <string name="trucks">Trucks</string>
+    <string name="luxury_n_prestige">Luxury &amp; Prestige</string>
+    <string name="your_name">Your Name</string>
+    <string name="phone_no">Phone No.</string>
+    <string name="your_email">Your Email</string>
+    <string name="your_pass">Your Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="user_pass">User name / Phone No.</string>
+    <string name="pass">Password</string>
+    <string name="no_account">don\'t have account? -> Sign Up</string>
+    <string name="details">Details</string>
+    <string name="speed">kmph</string>
+    <string name="seats">Seats</string>
+    <string name="reserve">Reserve</string>
+    <string name="from">From</string>
+    <string name="till">Till</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="location">Location</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="drop_off">Drop Off</string>
+    <string name="return_">Return</string>
+    <string name="rental_title">You made a Rental Order</string>
+    <string name="for_">For: </string>
+    <string name="plate">Plate No: </string>
+    <string name="from_">From: </string>
+    <string name="location_title">To be picked up</string>
+    <string name="at">at</string>
+    <string name="price">Price: </string>
+    <string name="brand_name">Brand Name</string>
+    <string name="model_hint">Model</string>
+    <string name="plate_hint">Plate Number</string>
+    <string name="category_hint">Category</string>
+    <string name="top_speed_hint">Top Speed</string>
+    <string name="seats_hint">No. of Seats</string>
+    <string name="transmission_hint">Transmission</string>
+    <string name="rates_hint">Rate / day</string>
+    <string name="add">ADD</string>
+    <string name="modify">Modify</string>
+    <string name="uploads_title">Your Uploads</string>
+    <string name="car_logo_hint">Vehicle Logo</string>
+    <string name="user_img_hint">User Profile Image</string>
+    <string name="launcher_img">Launcher Image</string>
+    <string name="front_view_hint">Front View</string>
+    <string name="front_and_side_hint">Front And Side View</string>
+    <string name="back_view_hint">Back View</string>
+    <string name="boot_view_hint">Open Boot View</string>
+    <string name="interior_front_hint">Interior Front View</string>
+    <string name="interior_back_hint">Interior Back View</string>
+    <string name="Wholesome_view_hint">Wholesome View</string>
+    <string-array name="brand_names">
+        <item>Toyota</item>
+        <item>Audi</item>
+        <item>Mercedes</item>
+        <item>Land Rover</item>
+        <item>Subaru</item>
+        <item>Nissan</item>
+        <item>Peugeot</item>
+        <item>Mazda</item>
+        <item>Volkswagen</item>
+        <item>Isuzu</item>
+        <item>Mitsubishi</item>
+        <item>Volvo</item>
+        <item>Ashock Leyland</item>
+        <item>Eicher</item>
+        <item>Hindustan</item>
+        <item>Mack</item>
+        <item>Jeep</item>
+        <item>Ford</item>
+        <item>BMW</item>
+        <item>Chevrolet</item>
+    </string-array>
+    <string-array name="categories">
+        <item>Mini</item>
+        <item>Van</item>
+        <item>Pickup</item>
+        <item>Luxury &amp; Prestige</item>
+        <item>Truck</item>
+    </string-array>
+
+    <string-array name="transmission">
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
 
 </resources>

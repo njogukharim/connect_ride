@@ -17,15 +17,288 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/add_vehicle_title"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
                 android:text="@string/add_vehicle"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textAlignment="center"
+                android:textColor="@color/theme_orange"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/brand_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/brand_name"
+                android:labelFor="@+id/brand_autoCompleteTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_vehicle_title">
+
+                <AutoCompleteTextView
+                    android:id="@+id/brand_autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:inputType="text"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text=""
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/model_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/model_hint"
+                android:labelFor="@+id/model_autoCompleteTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/brand_TI">
+
+                <AutoCompleteTextView
+                    android:id="@+id/model_autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:inputType="text"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text=""
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/plate_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/plate_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/model_TI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/plate_ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_weight="5"
+                    android:inputType="text"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/category_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/category_hint"
+                android:labelFor="@id/category_autoCompleteTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plate_TI">
+
+                <AutoCompleteTextView
+                    android:id="@+id/category_autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:inputType="text"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text=""
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/top_speed_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:hint="@string/top_speed_hint"
+                app:layout_constraintEnd_toStartOf="@+id/seats_TI"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category_TI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/top_speed_ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text=""
+                    android:inputType="text"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/seats_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/seats_hint"
+                app:layout_constraintBottom_toBottomOf="@+id/top_speed_TI"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/top_speed_TI"
+                app:layout_constraintTop_toTopOf="@+id/top_speed_TI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/seats_ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text=""
+                    android:inputType="text"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/transmission_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:hint="@string/transmission_hint"
+                android:labelFor="@+id/transmission_ET"
+                app:layout_constraintEnd_toStartOf="@+id/rates_TI"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/top_speed_TI">
+
+                <AutoCompleteTextView
+                    android:id="@+id/transmission_autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:inputType="text"
+                    android:text=""
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rates_TI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/rates_hint"
+                android:labelFor="@+id/rates_ET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/transmission_TI"
+                app:layout_constraintTop_toTopOf="@+id/transmission_TI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rates_ET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text=""
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/front_view_CV"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/transmission_TI"
+                app:layout_constraintStart_toStartOf="@+id/transmission_TI"
+                app:layout_constraintTop_toBottomOf="@+id/transmission_TI">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back_view_CV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/front_view_CV"
+                app:layout_constraintEnd_toEndOf="@+id/rates_TI"
+                app:layout_constraintStart_toStartOf="@+id/rates_TI"
+                app:layout_constraintTop_toTopOf="@+id/front_view_CV">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/interior_front_cv"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/front_view_CV"
+                app:layout_constraintStart_toStartOf="@+id/front_view_CV"
+                app:layout_constraintTop_toBottomOf="@+id/front_view_CV">
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/interior_back_cv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:cardElevation="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/interior_front_cv"
+                app:layout_constraintEnd_toEndOf="@+id/back_view_CV"
+                app:layout_constraintStart_toStartOf="@+id/back_view_CV"
+                app:layout_constraintTop_toTopOf="@+id/interior_front_cv">
+
+            </androidx.cardview.widget.CardView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background"
+            android:text="@string/add" />
     </FrameLayout>
 </layout>

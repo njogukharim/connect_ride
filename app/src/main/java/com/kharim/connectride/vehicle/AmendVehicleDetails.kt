@@ -32,6 +32,4 @@ class AmendVehicleDetails : Fragment() {
         return binding.root
     }
 
-
-
 }
