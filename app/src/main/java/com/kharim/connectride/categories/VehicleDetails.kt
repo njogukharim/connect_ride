@@ -25,9 +25,7 @@ class VehicleDetails : Fragment() {
         binding = FragmentVehicleDetailsBinding.inflate(inflater)
         binding.lifecycleOwner = this
 
-        binding.button8.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_vehicleDetails_to_rentalReservation)
-        }
+
         return binding.root
     }
 

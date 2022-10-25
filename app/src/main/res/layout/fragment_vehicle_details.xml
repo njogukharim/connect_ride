@@ -17,15 +17,221 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/vehicle_details"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/plate_number_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/plate_text_background"
+                    android:gravity="center"
+                    android:hint="@string/plate"
+                    android:text=""
+                    android:textAlignment="center" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="@dimen/main_vehicle_img_radius">
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/vehicleNameLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/vehicles_det_linear_margin"
+                    android:layout_marginBottom="@dimen/vehicles_det_linear_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/vehicle_det_brand_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/brand_name_text_size" />
+
+                    <TextView
+                        android:id="@+id/vehicle_det_model_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/model_name_text_size" />
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/interiors_recyclerView"
+                android:layout_marginHorizontal="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+            <TextView
+                android:id="@+id/details_mini_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:textColor="@color/theme_blue"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:textStyle="bold"
+                android:textSize="@dimen/mini_title_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interiors_recyclerView" />
+
+
+
+            <Button
+                android:id="@+id/imageButton"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|center"
+                android:contentDescription="@string/reserve"
+                android:text="@string/reserve"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/standard_margin"
+                android:padding="@dimen/standard_padding"
+                app:layout_constraintBottom_toTopOf="@+id/imageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details_mini_title">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/speed_icon_cardView"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="@dimen/standard_padding"
+                    app:layout_constraintEnd_toStartOf="@+id/details_divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/top_speed_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/standard_padding"
+                    android:gravity="center"
+                    android:text="@string/top_speed_hint"
+                    android:textColor="@color/theme_orange"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/speed_icon_cardView"
+                    app:layout_constraintStart_toStartOf="@+id/speed_icon_cardView"
+                    app:layout_constraintTop_toBottomOf="@+id/speed_icon_cardView" />
+
+                <View
+                    android:id="@+id/details_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/standard_margin"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/seats_icon_cardView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/standard_padding"
+                    app:layout_constraintBottom_toBottomOf="@+id/speed_icon_cardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/details_divider"
+                    app:layout_constraintTop_toTopOf="@+id/speed_icon_cardView">
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/seats_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/seats"
+                    android:textColor="@color/theme_orange"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/top_speed_TV"
+                    app:layout_constraintEnd_toEndOf="@+id/seats_icon_cardView"
+                    app:layout_constraintStart_toStartOf="@+id/seats_icon_cardView"
+                    app:layout_constraintTop_toTopOf="@+id/top_speed_TV" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/transmission_icon_cardView"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="@dimen/standard_padding"
+                    app:layout_constraintEnd_toEndOf="@+id/speed_icon_cardView"
+                    app:layout_constraintStart_toStartOf="@+id/speed_icon_cardView"
+                    app:layout_constraintTop_toBottomOf="@+id/top_speed_TV">
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/transmission_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/transmission_hint"
+                    android:textColor="@color/theme_orange"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/transmission_icon_cardView"
+                    app:layout_constraintStart_toStartOf="@+id/transmission_icon_cardView"
+                    app:layout_constraintTop_toBottomOf="@+id/transmission_icon_cardView" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fuel_type_icon_CV"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/transmission_icon_cardView"
+                    app:layout_constraintEnd_toEndOf="@+id/seats_icon_cardView"
+                    app:layout_constraintStart_toStartOf="@+id/seats_icon_cardView"
+                    app:layout_constraintTop_toTopOf="@+id/transmission_icon_cardView" >
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/fuel_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/fuel"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/theme_orange"
+                    app:layout_constraintBottom_toBottomOf="@+id/transmission_TV"
+                    app:layout_constraintEnd_toEndOf="@+id/fuel_type_icon_CV"
+                    app:layout_constraintStart_toStartOf="@+id/fuel_type_icon_CV"
+                    app:layout_constraintTop_toTopOf="@+id/transmission_TV" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
     </FrameLayout>
 </layout>

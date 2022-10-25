@@ -26,9 +26,9 @@ class AmendVehicleDetails : Fragment() {
         binding = FragmentAmendVehicleDetailsBinding.inflate(inflater)
         binding.lifecycleOwner = this
 
-        binding.button3.setOnClickListener{
-            startActivity(Intent(this@AmendVehicleDetails.requireContext(), Welcome::class.java))
-        }
+//        binding.button3.setOnClickListener{
+//            startActivity(Intent(this@AmendVehicleDetails.requireContext(), Welcome::class.java))
+//        }
         return binding.root
     }
 

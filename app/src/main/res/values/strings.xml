@@ -50,6 +50,7 @@
     <string name="category_hint">Category</string>
     <string name="top_speed_hint">Top Speed</string>
     <string name="seats_hint">No. of Seats</string>
+    <string name="fuel">Fuel</string>
     <string name="transmission_hint">Transmission</string>
     <string name="rates_hint">Rate / day</string>
     <string name="add">ADD</string>

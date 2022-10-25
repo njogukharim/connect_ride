@@ -2,11 +2,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_enabled="true">
-        <shape android:shape="rectangle">
-            <corners android:radius="@dimen/standard_button_radius"/>
+        <shape android:shape="rectangle" >
+            <corners android:radius="5dp"/>
             <solid android:color="@color/theme_orange"/>
-            <stroke android:color="@color/theme_orange"/>
         </shape>
-        <color android:color="@color/theme_orange"/>
+        <color android:color="@color/theme_orange" />
     </item>
+
 </selector>
