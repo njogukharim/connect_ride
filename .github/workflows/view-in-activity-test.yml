@@ -1,0 +1,48 @@
+name: android view test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: Build and nun test
+    #runs-on: ubuntu-latest
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
+    - name: Build debug APK
+      run: bash ./gradlew assembleDebug --stacktrace
+    - name: Run unit test 
+      run: ./gradlew testDebugUnitTest
+    - name: Run instrumentation tests
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+          api-level: 29
+          arch: x86
+          profile: Nexus 6
+          avd-name: test
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: ./gradlew connectedCheck
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
+      with:
+        name: application
+        path: app/build/output/apk/debug/app-debug.apk
+    
+     
